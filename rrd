@@ -1,0 +1,3 @@
+#!/bin/bash
+exec docker run --rm --log-driver none -i -m 100m --privileged -u drop-core -w /home/drop-core/ -v /var/lib/drop/rrd:/tmp/rrd rrd:0.1.0 ./rrd /tmp/rrd
+

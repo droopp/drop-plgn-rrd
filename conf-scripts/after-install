@@ -1,0 +1,10 @@
+#!/bin/sh
+# Don't change this file
+# Its generate automatically
+
+useradd drop-core
+chown -R drop-core:drop-core /opt/drop-plgn-rrd
+
+## create symlink
+ln -s /opt/drop-plgn-rrd/drop-plgn-rrd.json /var/lib/drop/flows/drop-plgn-rrd.json
+ln -s /opt/drop-plgn-rrd/rrd /var/lib/drop/plugins/rrd
