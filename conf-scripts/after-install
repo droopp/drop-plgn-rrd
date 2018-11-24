@@ -3,7 +3,10 @@
 # Its generate automatically
 
 useradd drop-core
+mkdir /var/lib/drop/rrd
+
 chown -R drop-core:drop-core /opt/drop-plgn-rrd
+chown -R drop-core:drop-core /var/lib/drop/rrd
 
 ## create symlink
 ln -s /opt/drop-plgn-rrd/drop-plgn-rrd.json /var/lib/drop/flows/drop-plgn-rrd.json
