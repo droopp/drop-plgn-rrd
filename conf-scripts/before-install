@@ -2,11 +2,5 @@
 # Don't change this file
 # Its generate automatically
 
-
-NAME=rrd:0.1.0
-
 rm -f /var/lib/drop/flows/drop-plgn-rrd.json
 rm -f /var/lib/drop/plugins/rrd
-
-docker pull $DROP_DOCKER_REGISTRY/$NAME
-docker tag $DROP_DOCKER_REGISTRY/$NAME $NAME

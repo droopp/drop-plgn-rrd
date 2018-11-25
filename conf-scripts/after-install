@@ -2,6 +2,8 @@
 # Don't change this file
 # Its generate automatically
 
+NAME=rrd:0.1.0
+
 useradd drop-core
 mkdir /var/lib/drop/rrd
 
@@ -11,3 +13,6 @@ chown -R drop-core:drop-core /var/lib/drop/rrd
 ## create symlink
 ln -s /opt/drop-plgn-rrd/drop-plgn-rrd.json /var/lib/drop/flows/drop-plgn-rrd.json
 ln -s /opt/drop-plgn-rrd/rrd /var/lib/drop/plugins/rrd
+
+docker pull $DROP_DOCKER_REGISTRY/$NAME
+docker tag $DROP_DOCKER_REGISTRY/$NAME $NAME
