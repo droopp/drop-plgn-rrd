@@ -2,6 +2,8 @@
 # Don't change this file
 # Its generate automatically
 
+source ~/.bashrc
+
 NAME=rrd:0.1.0
 
 useradd drop-core
@@ -14,5 +16,5 @@ chown -R drop-core:drop-core /var/lib/drop/rrd
 ln -s /opt/drop-plgn-rrd/drop-plgn-rrd.json /var/lib/drop/flows/drop-plgn-rrd.json
 ln -s /opt/drop-plgn-rrd/rrd /var/lib/drop/plugins/rrd
 
-/usr/bin/docker pull $DROP_DOCKER_REGISTRY/$NAME
-/usr/bin/docker tag $DROP_DOCKER_REGISTRY/$NAME $NAME
+docker pull $DROP_DOCKER_REGISTRY/$NAME
+docker tag $DROP_DOCKER_REGISTRY/$NAME $NAME
